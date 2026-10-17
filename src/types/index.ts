@@ -5,9 +5,12 @@
 export type ActiveTab = 
   | 'gps-monitor' 
   | 'gold-geology' 
+  | 'scientific-formulas'
+  | 'interactive-map'
   | 'archaeology' 
   | 'spiritual-wisdom' 
   | 'grounding-peace'
+  | 'field-history'
   | 'donation-developer'
   | 'user-manual';
 
@@ -86,4 +89,31 @@ export interface DonationRecord {
   notes: string;
   submittedAt: string;
   status: 'Terkonfirmasi' | 'Sedang Diverifikasi';
+}
+
+export interface FieldLogEntry {
+  id: string;
+  timestamp: string;
+  latitude: number;
+  longitude: number;
+  altitude: number;
+  geologicalZone: string;
+  observationNotes: string;
+  rockTypeObserved: string;
+  studyReflection: string;
+}
+
+export interface HeritageSiteMapMarker {
+  id: string;
+  name: string;
+  category: 'Situs Cagar Budaya' | 'Zona Formasi Geologis' | 'Jejak Peradaban Maritim';
+  province: string;
+  latitude: number;
+  longitude: number;
+  estimatedDepth: string;
+  stratigraphySigns: string;
+  artifactFound: string;
+  historicalContext: string;
+  officialStatus: string;
+  scientificAnalysis: string;
 }

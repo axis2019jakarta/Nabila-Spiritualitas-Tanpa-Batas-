@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Sparkles, Calculator, BookOpen, Search, CheckCircle2, AlertTriangle, ShieldCheck } from 'lucide-react';
 import { GOLD_MINERAL_SPECS, PYRITE_COMPARISON } from '../data/scienceGoldData';
 import { MineralDensityChart } from './MineralDensityChart';
+import { GeophysicalRadarSimulator } from './GeophysicalRadarSimulator';
 
 interface GoldGeologyStudioProps {
   latitude?: number | null;
@@ -93,11 +94,14 @@ export const GoldGeologyStudio: React.FC<GoldGeologyStudioProps> = ({
               Studio Sains Geologi & Deteksi Emas
             </h2>
             <p className="text-xs text-amber-300/80">
-              Kajian Ilmiah Mineralogi, Kitab Al-Biruni & Visualisasi Statistik Recharts
+              Kajian Ilmiah Mineralogi, Kitab Al-Biruni, Radar Geofisika & Visualisasi Statistik Recharts
             </p>
           </div>
         </div>
       </div>
+
+      {/* Geophysical Radar Simulator & NASA Telemetry */}
+      <GeophysicalRadarSimulator latitude={latitude} longitude={longitude} />
 
       {/* Recharts Statistical Visualization Component */}
       <MineralDensityChart latitude={latitude} longitude={longitude} />
