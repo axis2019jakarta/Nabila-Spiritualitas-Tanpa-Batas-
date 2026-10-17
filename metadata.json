@@ -1,0 +1,6 @@
+{
+  "name": "Nabila Ahmad: Spiritualitas Tanpa Batas",
+  "description": "Portal kajian hikmah ulama, sains geologi emas, sejarah peninggalan arkeologi, dan panduan dzikir ketenangan batin untuk pengguna mobile.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
